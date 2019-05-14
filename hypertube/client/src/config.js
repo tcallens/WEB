@@ -3,6 +3,6 @@ module.exports = {
 		"server": 1337,
 		"client": 3001
 	},
-	"host": "http://localhost",
-	"default_profile_picture": "http://localhost:1337/images/default-profile-picture.jpg"
+	"host": "http://46.101.198.167",
+	"default_profile_picture": "http://46.101.198.167:1337/images/default-profile-picture.jpg"
 };
