@@ -1,0 +1,267 @@
+/* -=-=- SIGNIN / SIGNUP -=-=- */
+
+#container1 {
+	padding: 10px 0;
+	text-align: center;
+	background-color: #FFF;
+	width: 10%;
+	background-position: center;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	min-width: 350px;
+	min-height: 350px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-form {
+	width: 200px;
+	padding: 15px;
+	margin: 5px 0 10px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+	outline: none;
+}
+
+#container1 .registerbtn {
+	background-color: #09005F;
+	color: #FFF;
+	padding: 16px 20px;
+	margin: 15px 0 0px 0;
+	border: none;
+	cursor: pointer;
+	width: 75%;
+	opacity: 1;
+}
+
+#container1 .registerbtn:hover {
+	opacity: 0.8;
+}
+
+/* -=-=- PROFIL -=-=- */
+
+#profil {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 120px;
+}
+
+#profil #cont1 {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	display: flex;
+	background-color: #09005F;
+	box-shadow: 0px 10px 40px rgba(39,45,255,0.7);
+	text-align: center;
+	border-radius: 20px;
+	padding: 0px 50px 0px 50px;
+	margin-bottom: 30px;
+}
+
+#profil #cont2 {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	display: flex;
+	background-color: #09005F;
+	box-shadow: 0px 10px 40px rgba(39,45,255,0.7);
+	text-align: center;
+	border-radius: 20px;
+	padding: 0px 0 20px 0;
+	margin-bottom: 30px;
+}
+
+#profil #cont3 {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	display: flex;
+	background-color: #09005F;
+	box-shadow: 0px 10px 40px rgba(39,45,255,0.7);
+	text-align: center;
+	border-radius: 20px;
+	padding: 0px 0 20px 0;
+}
+
+
+#profil #cont2 form {
+	display: flex;
+	background-color: #09005F;
+	text-align: center;
+	border-radius: 20px;
+	padding: 20px 30px 20px 30px;
+	flex-direction: column;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#profil #cont1 #profil-title {
+	color: #fff;
+	font-size: 30px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+#profil #cont2 .btn {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	background-color: #514BFF;
+	border-radius: 50px;
+	color: #FFF;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	width: 100px;
+	height: 40px;
+	margin-right: 20px;
+	opacity: 1;
+}
+
+#profil #cont2 .btn:hover {
+	opacity: 0.8;
+}
+
+#profil #cont2 .title {
+	color : #fff;
+}
+
+#profil #cont3 form {
+	display: flex;
+	background-color: #09005F;
+	text-align: center;
+	border-radius: 20px;
+	padding: 20px 30px 20px 30px;
+	flex-direction: column;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+
+#profil #cont3 .btn {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	background-color: #514BFF;
+	border-radius: 50px;
+	color: #FFF;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	width: 225px;
+	height: 40px;
+	margin-right: 7px;
+	opacity: 1;
+}
+
+#profil #cont3 .btn:hover {
+	opacity: 0.8;
+}
+
+#profil #cont3 .title {
+	color : #fff;
+}
+
+
+
+/* -=-=- REDIRECT -=-=- */
+
+#redirect {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #09005F;
+	width: 10%;
+	background-position: center;
+	margin-top: 300px;;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	min-width: 500px;
+	min-height: 54px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#redirect #red {
+	display: flex;
+	justify-content: space-around;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #09005F;
+	width: 10%;
+	background-position: center;
+	margin-top: 10px;;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	min-width: 450px;
+	min-height: 50px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#redirect #red a {
+	color: #fff;
+}
+
+#redirect #se {
+	font-size: 25px;
+	color: #fff;
+}
+
+#redirect h1 {
+	color: #fff;
+}
+
+#redirect p {
+	color: #fff;
+}
+
+/* -=-=- ALERTS -=-=- */
+
+#notif-t {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff;
+	padding: 10px 0 10px 0;
+	position: fixed;
+	background-color: GREEN;
+	height: 20px;
+	width: 600px;
+	top: 80px;
+	right: 20px;
+	text-align: center;
+	z-index: 2000;
+}
+
+#notif-f {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff;
+	padding: 10px 0 10px 0;
+	position: fixed;
+	background-color: RED;
+	height: 20px;
+	width: 600px;
+	top: 80px;
+	right: 20px;
+	text-align: center;
+	z-index: 2000;
+}
+
+#notif-t span {
+	color: #fff;
+}
+
+#notif-f span {
+	color: #fff;
+}

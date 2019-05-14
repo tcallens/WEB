@@ -1,0 +1,112 @@
+.main_cam_container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	margin-top: 100px;
+}
+
+#f_upload{
+	margin-top: 30px;
+}
+.ri_btn{
+	height: 100px;
+	width: 100px;
+}
+
+#postPhotoButton{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	background-color: #514BFF;
+	border: none;
+	cursor: pointer;
+	width: 100px;
+	height: 20px;
+	margin-right: 20px;
+	opacity: 1;
+	color:red;
+}
+
+#postPhotoButton:hover {
+	opacity: 0.8;
+}
+
+#takePhotoButton{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fff;
+	background-color: #514BFF;
+	border: none;
+	cursor: pointer;
+	width: 100px;
+	height: 20px;
+	margin-right: 20px;
+	opacity: 1;
+	color: #fff;
+}
+
+#takePhotoButton:hover {
+	opacity: 0.8;
+}
+
+
+#f_upload{
+	position: relative;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+}
+
+.result_photo{
+	margin-left: 60px;
+	background-color: #f1f1f1;
+}
+
+#myGallery{
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+	background-color: #09005F;
+	width: 1200px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.camera {
+	display: flex;
+	border-style: solid;
+	border-width: 20px;
+	border-color: #fff;
+	border-radius: 30px;
+}
+
+.output {
+	position: absolute;
+}
+.config {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+	background-color: #09005F;
+}
+
+#txt_none {
+	color: #fff;
+}
+
+#inputFile {
+	color: #fff;
+}
+
+#takeandpost {
+	display: flex;
+	justify-content: center;
+}

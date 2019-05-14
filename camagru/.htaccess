@@ -1,0 +1,8 @@
+ErrorDocument 400 http://localhost:8080/camagru_ok/public/errors.php?err=400
+ErrorDocument 403 http://localhost:8080/camagru_ok/public/errors.php?err=403
+ErrorDocument 404 http://localhost:8080/camagru_ok/public/errors.php?err=404
+ErrorDocument 405 http://localhost:8080/camagru_ok/public/errors.php?err=405
+ErrorDocument 408 http://localhost:8080/camagru_ok/public/errors.php?err=408
+ErrorDocument 500 http://localhost:8080/camagru_ok/public/errors.php?err=500
+ErrorDocument 502 http://localhost:8080/camagru_ok/public/errors.php?err=502
+ErrorDocument 504 http://localhost:8080/camagru_ok/public/errors.php?err=504
