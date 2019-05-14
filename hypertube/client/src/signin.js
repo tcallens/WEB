@@ -87,7 +87,7 @@ class SignIn extends Component {
 										<span> { Message("signin.sign.first") }</span>
 									</center>
 									<hr className="my-4" style={{ backgroundColor: "#393e46", color: "#393e46", height: "2px", border: "none" }} />	
-									<a style={{ textDecoration: "none" }} href="http://46.101.198.167:1337/sign/google">
+									<a style={{ textDecoration: "none" }} href="http://46.101.234.65:1337/sign/google">
 										<button
 											className="btn btn-lg btn-block text-uppercase"
 											style={{ backgroundColor: "#ea4335", color: "white" }}
@@ -97,7 +97,7 @@ class SignIn extends Component {
 										</button>
 									</a>
 									<br/>
-									<a style={{ textDecoration: "none" }} href="http://46.101.198.167:1337/sign/42">
+									<a style={{ textDecoration: "none" }} href="http://46.101.234.65:1337/sign/42">
 										<button
 											className="btn btn-lg btn-block text-uppercase"
 											style={{ backgroundColor: "white", color: "black" }}
@@ -107,7 +107,7 @@ class SignIn extends Component {
 										</button>
 									</a>
 									<br/>
-									<a style={{ textDecoration: "none" }} href="http://46.101.198.167:1337/sign/github">
+									<a style={{ textDecoration: "none" }} href="http://46.101.234.65:1337/sign/github">
 										<button
 											className="btn btn-lg btn-block text-uppercase"
 											style={{ backgroundColor: "#2b3137", color: "#fafbfc" }}
