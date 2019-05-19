@@ -44,6 +44,7 @@ services:
     container_name: client
     build:
       context: ./client
+    command : npm start
     restart: always
     ports:
       - "80:3000"

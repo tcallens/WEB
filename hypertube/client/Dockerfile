@@ -8,9 +8,4 @@ COPY package.json package-lock.json /client/
 RUN npm install && npm cache clean --force
 ENV PATH /client/node_modules/.bin:$PATH
 
-RUN npm install -g serve
-
 COPY . /client/
-
-RUN npm run build
-CMD serve -s build -l 3000

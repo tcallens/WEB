@@ -14,6 +14,7 @@ import ConfirmAccount from './confirm_account';
 import SendResetPassword from './send_reset_password';
 import ResetPassword from './reset_password';
 import Movie from './movie';
+import S_Profile from './scrim/profile';
 import Redirect from "./redirect";
 import { call } from './api';
 import NotFound from "./404";
@@ -104,6 +105,7 @@ class App extends Component {
 					<div>
 						<Header setLg={this.setLg} setUserId={this.setUserId} user_id={this.state.user_id} />
 						<Switch>
+							<Route path="/scrim/profile" component={S_Profile} />
 							<Route
 								exact
 								path="/"

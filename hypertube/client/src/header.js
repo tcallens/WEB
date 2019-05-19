@@ -1,103 +1,66 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import { Navbar, Nav, Button} from "react-bootstrap";
-import { call, message } from "./api";
-import Message from "./message";
+import { Navbar, Nav, Button, Image} from "react-bootstrap";
 
 import "./css/header.css";
 
-import ImgFr from "./medias/fr.png"
-import ImgEn from "./medias/en.jpg"
-
-class SignButton extends Component {
-	constructor(props){
-		super(props);
-		
-		this.signOut = this.signOut.bind(this);
-		this.setLanguage = this.setLanguage.bind(this);
-	}
-
-	async signOut(){
-		let response = await call("/sign/out");
-		if (response.status === 200){
-			this.props.setUserId(null);
-			this.props.history.push("/");
-			message("success", Message("mess.logout"));
-		}
-	}
-
-	async setLanguage(lg) {
-		let response = await call("/update/", {"language":lg});
-		if (response.status === 200){
-			this.props.setLg(lg);
-		} else {
-			message("error", Message("mess.clang"));
-		}
-
-	}
-
-	render () {
-		if (!this.props.user_id) {
-			return (
-				<div style={{ fontFamily: "'Heebo', sans-serif", color: "#F5F5DC" }}>
-					<img className="img1" alt="fr" src={ ImgFr } height="25" width="38" onClick={ () => this.props.setLg("fr") } />
-					<img className="img2" alt="en" src={ ImgEn } height="25" width="38" onClick={ () => this.props.setLg("en") } />
-					<Button onClick={ () => { this.props.history.push("/sign/in") }} variant="danger" style={{ marginRight: "10px" }}>{ Message("header.connect.btn") }</Button>
-					<Button onClick={ () => { this.props.history.push("/sign/up") }} variant="danger">{ Message("header.connect.btn2") }</Button>
-				</div>
-			);
-		}
-		else {
-			return (
-				<div style={{ fontFamily: "'Heebo', sans-serif", color: "#F5F5DC" }}>
-					<img className="img1" alt="fr" src={ ImgFr } height="25" width="38" onClick={ () => this.setLanguage("fr") } />
-					<img className="img2" alt="en" src={ ImgEn } height="25" width="38" onClick={ () => this.setLanguage("en") } />
-					<Button onClick={this.signOut} variant="danger">{ Message("header.connect.btn3") }</Button>
-				</div>
-			);
-		}
-	}
-}
-
-class LoggedNavbar extends Component {
-	render () {
-		if (this.props.user_id) {
-			return (
-				<Nav>
-					<Nav.Link onClick={() => this.props.history.push("/profile")}>{ Message("header.poss.btn") }</Nav.Link>
-				</Nav>
-			);
-		} else {
-			return null;
-		}
-	}
-}
+import Img_logo from "./medias/logo.png"
+import Img_profile from "./scrim/medias/profile.jpg"
+import Img_chevron from "./scrim/medias/chevron.png"
+import Img_nf from "./scrim/medias/newfriend.png"
 
 class Header extends Component {
-	// setting the document title to our project name
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			"color": "transparent"
+		};
+	}
+
+	state = {
+		color: 'transparent'
+	}
+
+	listenScrollEvent = e => {
+		if (window.scrollY > 110) {
+			this.setState({"color": "#000"});
+		} else {
+			this.setState({"color": "transparent"});
+		}
+	}
+
 	componentDidMount() {
-		document.title = "HYPERTUBE";
+		window.addEventListener('scroll', this.listenScrollEvent);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.listenScrollEvent);
 	}
 
 	render() {
 		return (
 			<div>
-				<Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fixed="top">
-					<Navbar.Brand href="#" onClick={ () => { this.props.history.push("/") }}>
-						<b style={{ color: "#ff0000" }}>{" HYPERTUBE "}</b>
+				<Navbar className="h_navbar" style={{backgroundColor: this.state.color}} collapseOnSelect expand="sm" variant="dark" fixed="top">
+					<Navbar.Brand href="#" onClick={ () => { this.props.history.push("/scrim/profile") }}>
+						<b style={{ color:'#fff', fontSize:'20px' }}><img src={Img_logo} width="48px" />{" SCRIM.GG "}</b>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav"/>
 					<Navbar.Collapse id="responsive-navbar-nav">
-						<LoggedNavbar user_id={this.props.user_id} history={this.props.history}/>
+						<Nav.Link className="h_link" onClick={() => this.props.history.push("/scrim/profile")}>Scrims</Nav.Link>
+						<Nav.Link className="h_link" onClick={() => this.props.history.push("/scrim/profile")}>Search and find</Nav.Link>
 						<Navbar.Collapse className="justify-content-end" >
-							<SignButton setLg={this.props.setLg} setUserId={this.props.setUserId} user_id={this.props.user_id} history={ this.props.history } />
+							<div className="h_cont_imgs">
+								<Image className="h_img_nf" height="22" width="22" src={ Img_nf } />
+								<input id="h_cont_input" class="form-control mr-sm-2" type="text" placeholder="Search"/>
+								</div>
+							<div className="h_cont_right">
+								<Image className="h_img_pro" height="42" width="42" src={ Img_profile } roundedCircle />
+								<img className="h_img_che" height="35" width="35" src={ Img_chevron } />
+							</div>
 						</Navbar.Collapse>
 					</Navbar.Collapse>
-				</Navbar>
-				<Navbar bg="dark" variant="dark" style={{visibility: "hidden"}}>
-					<Navbar.Brand> 
-						<b>{" HYPERTUBE "}</b>
-					</Navbar.Brand>
 				</Navbar>
 			</div>
 		);
